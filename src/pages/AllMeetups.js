@@ -24,9 +24,13 @@ const DUMMY_DATA = [
 export const AllMeetupsPage = () => {
   fetch(
     "https://udemy-react-course-ac235-default-rtdb.firebaseio.com/meetups.json"
-  ).then((response) => {
-    response.json();
-  });
+  )
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      "무엇을 받아올건지, 어떻게 분리해낼것인지";
+    });
   return (
     <section>
       <h1>All Meetups</h1>
